@@ -1,0 +1,14 @@
+[23] 		# The second optional argument is not supplied so lst defaults to an empty list.
+		# The value of 23 is inserted into the beginning of the empty list resulting in a 
+		# list with a single element, 23
+
+[16, 1, 2]	# The value of 16 is inserted at the beginning of the list [1, 2] resulting in [16, 1, 2]
+
+[[10], 3, 4]	# Instead of a single integer, a list is being passed to be inserted into the list
+		# The resulting list is comprised of a list and two integers
+
+[[11], 23]	# I didn't understand what was going on here so had to Google it.
+		# The object that holds the default value is not created upon every function call but instead
+		# it's created when the function is defined, so when the default lst is modified on line 2,
+		# the default second argument is permanently modified.  This is only an issue with mutable objects.
+		# Apparently this is a feature of Python and not a bug

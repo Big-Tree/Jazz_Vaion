@@ -1,0 +1,27 @@
+The parent class window will be inherited twice in the class window_with_menu_and_toolbar.
+When using features from the window class within a window_with_menu_and_toolbar the programmer will be required to
+explicitly indicate which version of the window class to use.
+
+Alternatively virtual inheritance could be used to fix this issue.  The window_with_toolbar and window_with_menu
+class would inherit virtually from class window:
+
+class window
+{
+	...
+};
+
+class window_with_toolbar : public virtual window
+{
+	...
+};
+
+class window_with_menu : public virtual window
+{
+	...
+};
+
+class window_with_menu_and_toolbar : public window_with_menu,
+									 public window_with_toolbar
+{
+	...
+};

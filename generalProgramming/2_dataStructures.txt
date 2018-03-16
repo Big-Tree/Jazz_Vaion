@@ -1,0 +1,22 @@
+------------Associative array implementations------------
+
+Linked list:
+	- Easy to implement
+	- Computation for operations increases linearly with number of elements O(n)
+	- Only suitable for short arrays
+
+Hash table:
+	- Most commonly used
+	- The time required for operations is constant
+	- Performs at O(1)
+	- Support for collisions is required (when two keys have the same hash)
+	- As the table becomes full, depending on the collision method used, operations can 
+		increase in complexity exponentially.  If all keys are under the same hash then 
+		the complexity of operations is O(n).
+
+Self-balancing trees:
+	- The worst case performance of a tree is much better than that of a hash table O(logn)
+	- Not as fast as a well implemented hash table
+
+Self-balancing trees can be used for the buckets of the hash table giving the best case 
+performance of the hash table and worse case performance of the tree.

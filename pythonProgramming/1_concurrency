@@ -1,0 +1,6 @@
+I don't have any experience with modules used specifically for concurrency, however I 
+have used NumPy and Tensorflow.  Any large calculations performed with NumPy arrays 
+runs multi-threaded such as matrix multiplications.  To take advantage of the modules 
+concurrency,: python loops should be avoided.  Multiple separate matrix multiplications 
+will take a lot longer to compute than a single concatenated matrix.  If Tensorflow 
+is installed with GPU support then it will use parallel computing when training networks.

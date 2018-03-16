@@ -1,0 +1,2 @@
+- That the static variable is incremented every time a new instance is created
+- That no other function is altering the static variable
